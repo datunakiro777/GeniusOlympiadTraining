@@ -3,6 +3,7 @@ amount_and_duration = m_and_d.split()
 amount = int(amount_and_duration[0])
 duration = int(amount_and_duration[1])
 end_time = 0
+answer = 1
 for i in range(amount):
     x_and_y = str(input('enter x and y: '))
     StartTime_and_LatestTime = x_and_y.split()
@@ -11,10 +12,10 @@ for i in range(amount):
     if i == 0:
         end_time = start_time
     if end_time + duration >  latest_time:
-        print(0)
+        answer = 0
+        print(answer)
         break
     else:
         end_time += duration
-if i == (amount - 1):
-    print(1)
-
+if answer == 1:
+    print(answer)
